@@ -9,48 +9,62 @@ window.onload = init;
 var keys;
 var toType;
 var typingArea;
-function init(){
+var keysPlusShift;
+var counter;
+function init() {
     // lessons are defined in lessons.js
     toType = document.getElementById("toType");
     typingArea = document.getElementById("typingArea");
-    keys = document.querySelectorAll("div[key-text]");
-    toType.innerText = lessons["lesson1"].trim();
+    counter = document.getElementById("counter");
 
+    // keys
+    keys = document.querySelectorAll("div[key-text]");
+    keysPlusShift = document.querySelectorAll("div[shift-key-text]");
+
+    toType.innerText = lessons["lesson1"].trim();
     typingArea.addEventListener("keyup", typing);
 
     // initial highlight
     highLight();
 }
 
-function typing(event){
+function typing(event) {
     highLight();
 }
 
-function highLight(){
+function highLight() {
 
+    var shifts = document.getElementsByClassName("shift");
+
+    
     //first dehighlight all keys which are highlighted
     var highLighted = document.getElementsByClassName("highlight");
     for (let index = 0; index < highLighted.length; index++) {
         highLighted[index].classList.remove("highlight");
-        document.getElementsByClassName("keyboard")[0].style.backgroundColor = "#009688";
+        document.getElementById("typingArea").style.backgroundColor = "#00d1b2";
     }
+    shifts[0].classList.remove("highlight");
+    shifts[1].classList.remove("highlight");
 
+    // -----------------------------------------------------------------------
     var keyText = toType.innerText[typingArea.value.length];
     let nodeToHighLight = document.querySelector(`div[key-text='${keyText}']`);
-    if(nodeToHighLight)
+    if (nodeToHighLight)
         nodeToHighLight.className += " " + "highlight";
+    else {
 
-    //if the enterd letter is wrong change the background
-    if(toType.innerText[typingArea.value.length - 1] != typingArea.value[typingArea.value.length -1 ]){
-        document.getElementsByClassName("keyboard")[0].style.backgroundColor = "#E91E63";
+        // if here so it is a second letter key
+        // it needs to be shift enabled
+        nodeToHighLight = document.querySelector(`div[shift-key-text='${keyText}']`);
+        nodeToHighLight.className += " " + "highlight";
+        
+        shifts[0].className += " " + "highlight";
+        shifts[1].className += " " + "highlight";
+
     }
-}
-
-function remHighLight(text){
-    if(!text)return;
-    let one;
-    for(let i = 0; i < text.length; i++){
-        one = document.querySelector(`div[key-text='${text[i]}']`);
-        one.style.fill = "#fcfcfc";
+    //if the enterd letter is wrong change the background
+    if (toType.innerText[typingArea.value.length - 1] != typingArea.value[typingArea.value.length - 1]) {
+        document.getElementById("typingArea").style.backgroundColor = "#E91E63";
+        counter.innerText = parseInt(counter.innerText) + 1
     }
 }
