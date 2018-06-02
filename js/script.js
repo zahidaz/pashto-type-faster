@@ -42,7 +42,7 @@ function typing(event) {
     // if text reachs 85 char reset position
     if(event.target.value.length >= maxCharLength){
         event.target.value = "";
-        $("#toType").innerText = $("#toType").innerText.substring(0, maxCharLength);
+        $("#toType").innerText = $("#toType").innerText.substring(maxCharLength,$("#toType").innerText.length);
     }
 
     //check if lesson is completed
