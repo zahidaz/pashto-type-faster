@@ -1,0 +1,46 @@
+body{
+    height: 100vh;
+    margin: 0%;
+    background-color: #9c9c9c4d;
+}
+header{
+    height: 10%;
+}
+main{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.person-card{
+    background-color: #fff;
+    height: 500px;
+    width: 400px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 6px #0000004d;   
+}
+
+.person-img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-image: url("../img/person.jpg");
+    background-size:100%;
+}
+
+.line{
+    width: 80%;
+    margin: 0px auto;
+    border-top: 1px solid #0000008a;
+}
+a{
+    text-decoration: none;
+}
+
+.email, .name, .person-img, a{
+    margin: 40px auto;
+    color: #0000008a;
+}
