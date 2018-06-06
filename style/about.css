@@ -1,7 +1,7 @@
 body{
     height: 100vh;
     margin: 0%;
-    background-color: #9c9c9c4d;
+    background-color: rgba(155, 155, 155, 0.302);
 }
 header{
     height: 10%;
@@ -20,7 +20,7 @@ main{
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    box-shadow: 2px 2px 6px #0000004d;   
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.302);   
 }
 
 .person-img{
@@ -42,5 +42,5 @@ a{
 
 .email, .name, .person-img, a{
     margin: 40px auto;
-    color: #0000008a;
+    color: rgba(0, 0, 0, 0.541);
 }
