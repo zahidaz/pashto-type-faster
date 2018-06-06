@@ -57,6 +57,7 @@ table {
 
 
 
+
 *{
     margin: 0px;
     padding: 0px;
@@ -86,7 +87,6 @@ a{
     color:#fff;
     text-decoration: none;
     border-radius: 5px;
-    display: inline-block;
 }
 footer a{
     background-color: silver;
@@ -98,14 +98,13 @@ footer  *{
     padding: 0px 10px;
 }
 a#get-start{
-    font-size: 22px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    display: block;
+    font-size: 22px;    
+    padding: 20px;
+    background-color: #009688;
+}
+.get-start-button{
     margin-right: auto;
     margin-left: auto;
     margin-top:300px;
-    padding: 20px;
-    background-color: #009688;
+    width: 200px;
 }
