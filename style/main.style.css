@@ -88,6 +88,7 @@ a{
     color:#fff;
     text-decoration: none;
     border-radius: 5px;
+    width: fit-content;
 }
 footer a{
     background-color: silver;
@@ -106,7 +107,7 @@ a#get-start{
     display: block;
     margin-right: auto;
     margin-left: auto;
-    margin-top:20%;
+    margin-top:300px;
     padding: 20px;
     background-color: #009688;
 }
