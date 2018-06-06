@@ -1,46 +1,22 @@
-body{
-    height: 100vh;
-    margin: 0%;
-    background-color: rgba(155, 155, 155, 0.302);
-}
 header{
-    height: 10%;
+    height: 48px;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 17px;
+    user-select: none;
 }
-main{
-    height: 90%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.person-card{
-    background-color: #fff;
-    height: 500px;
-    width: 400px;
-    border-radius: 5px;
+
+header .content{
+    padding: 0 22px;
+    margin: 0 44px;
+    height: inherit;
     display: flex;
     flex-direction: column;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.302);   
+    justify-content: center;
 }
 
-.person-img{
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    background-image: url("../img/person.jpg");
-    background-size:100%;
-}
-
-.line{
-    width: 80%;
-    margin: 0px auto;
-    border-top: 1px solid #0000008a;
-}
-a{
-    text-decoration: none;
-}
-
-.email, .name, .person-img, a{
-    margin: 40px auto;
-    color: rgba(0, 0, 0, 0.541);
+.content .inside{
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    justify-content: space-between;
 }
