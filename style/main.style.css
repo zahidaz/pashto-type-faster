@@ -86,9 +86,7 @@ a{
     color:#fff;
     text-decoration: none;
     border-radius: 5px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    display: inline-block;
 }
 footer a{
     background-color: silver;
