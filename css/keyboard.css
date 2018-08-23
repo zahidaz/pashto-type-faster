@@ -1,0 +1,162 @@
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    border-radius: 5px;
+    padding: 7px;
+    background-color: #d5d5d8;
+    user-select: none;
+    
+    width: 820px;
+}
+
+.key {
+    background-color: #fff;
+    color: #000000;
+    font-size: 14px;
+    padding-left: 8px;
+    line-height: 29px;
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    flex: 1 1 auto;
+
+    border-bottom: 2px solid #898b8d;
+
+    /* make keyboard keys shrink and grow */
+    width: 50px;
+    height: 50px;
+
+}
+
+/* even padding for keyboard */
+.key:first-child{
+    margin-left: 0;
+}
+.row:last-child .key{
+    margin-bottom: 0;
+}
+/* end of even padding for keyboard */
+
+.letter {
+    font-size: 18px;
+}
+
+.second-letter {
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+.key.highlight {
+    background-color: #c11519;
+}
+
+    
+.key.finger {
+    /* box-shadow: inset 0px 0px 0px 2px #6100de; */
+    font-weight: bold;
+    color: #fff;
+    background-color: #898b8d;
+    border-color: #000000;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.dual {
+    line-height: 20px;
+    width: 30px;
+}
+
+.backspace {
+    width: 84px;
+}
+
+.tab {
+    width: 50px;
+    line-height: 40px;
+}
+
+.letter {
+    width: 30px;
+
+}
+
+.slash {
+    width: 64px;
+}
+
+.caps {
+    width: 70px;
+    line-height: 40px;
+}
+
+.enter {
+
+    width: 92px;
+    line-height: 40px;
+    text-align: center;
+    padding-left: 0;
+}
+
+.shift.left {
+    width: 90px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.shift.right {
+    width: 104px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.ctrl {
+    width: 50px;
+    line-height: 40px;
+}
+
+.space {
+    width: 234px;
+}
+
+
+.ctrl,
+.shift,
+.caps,
+.enter,
+.backspace,
+.tab,
+.amar {
+    color: #fff;
+    background-color: #bcbfc3;
+}
+
+.fn,
+.alt,
+.ctrl,
+.shift,
+.caps,
+.enter,
+.backspace,
+.tab,
+.amar {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* windows key */
+
+.wk.key {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEKSURBVGhD7dnBSQNREMbxvWgVahvGJjTWoCdjFdqCV7UKU0EKUO9CjnqRVBD9z0FYhscyO77wlvB98LssL8l8LGFhp1MURVEq5RDHOMMct7jDMx7QPDbgCWzAS9iA97ABl3jHF34G2Jmd5QBHOMU5ruDzgdJgY6WK/A04wwVuYLf4ES94xSe26P/YBj52rX8mK1TEbrMN+AYbsPRFEc2L2KHSh8dSkQAVyVCRABXJUJEAFclQkYBQkRW+K1jDx66Vzo5lMyqK8s/szZ9dzxFHRQJUJENFAlQkQ0UCVCSjeZG9eYnt49cKC9ha4QlDhSdXJBpf+Bo+TRc9tTP51VvtTH4ZqiiKkk3X/QKrHEPMEr1QlgAAAABJRU5ErkJggg==");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: center;
+}
