@@ -28,6 +28,15 @@ document.addEventListener('keyup', (event) => {
         vm.typed = vm.typed.replace(/.$/, "");
         return;
     }
+    
+    
+    
+    // scroll functionality
+    if(vm.typed.length >= 30) {
+        let sliceN = 1;
+        vm.typed = vm.typed.slice(sliceN);
+        vm.totype = vm.totype.slice(sliceN);
+    }
 
 
     // if all text is typed add no more chars to "typed"
